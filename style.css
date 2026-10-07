@@ -1,0 +1,788 @@
+:root {
+
+    --purple: #6758d4;
+
+    --purple-dark: #5144bd;
+
+    --green: #20a477;
+
+    --dark: #202035;
+
+    --text: #29293d;
+
+    --muted: #77778a;
+
+    --border: #e5e5ef;
+
+    --bg: #f6f6fb;
+
+    --white: #ffffff;
+
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+
+    background: var(--dark);
+
+    color: white;
+
+    min-height: 75px;
+
+    padding: 12px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-right: auto;
+
+}
+
+
+.logo {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: var(--purple);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+}
+
+
+.brand h1 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+
+.brand span {
+
+    color: #aaaabd;
+
+    font-size: 12px;
+
+}
+
+
+.status {
+
+    font-size: 13px;
+
+    color: #c8c8d5;
+
+}
+
+
+.status span {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #28c78c;
+
+    border-radius: 50%;
+
+    margin-right: 6px;
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+nav a {
+
+    color: #c8c8d5;
+
+    text-decoration: none;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+}
+
+
+nav a:hover,
+nav a.active {
+
+    background: var(--purple);
+
+    color: white;
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    width: 92%;
+
+    max-width: 980px;
+
+    margin: 35px auto;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(30, 30, 60, 0.04);
+
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-title h2 {
+
+    margin: 0 0 4px;
+
+    font-size: 19px;
+
+}
+
+
+.section-title small {
+
+    color: var(--muted);
+
+}
+
+
+.title-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eeeefa;
+
+    color: var(--purple);
+
+    font-weight: bold;
+
+}
+
+
+.title-icon.purple {
+
+    background: #eeeefa;
+
+    color: var(--purple);
+
+}
+
+
+.title-icon.green {
+
+    background: #e8f8f2;
+
+    color: var(--green);
+
+}
+
+
+.title-icon.dark {
+
+    background: #34344d;
+
+    color: white;
+
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+
+    width: 100%;
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    font-family: inherit;
+
+}
+
+
+textarea:focus {
+
+    border-color: var(--purple);
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button,
+.receiver-link {
+
+    border: none;
+
+    background: var(--purple);
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+}
+
+
+button:hover,
+.receiver-link:hover {
+
+    background: var(--purple-dark);
+
+}
+
+
+.sender button,
+.receiver button {
+
+    margin-top: 14px;
+
+}
+
+
+.button-row {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid-2 {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+}
+
+
+/* =========================
+   CONTENT BOX
+========================= */
+
+.content-box {
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    min-height: 100px;
+
+    overflow-x: auto;
+
+}
+
+
+.placeholder {
+
+    color: #9999a8;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th,
+td {
+
+    padding: 10px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    text-align: left;
+
+    font-size: 14px;
+
+}
+
+
+th {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   TREE
+========================= */
+
+.tree-scroll {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+}
+
+
+#tree {
+
+    min-width: 600px;
+
+}
+
+
+.tree-line {
+
+    stroke: #aaaabd;
+
+    stroke-width: 2;
+
+}
+
+
+.tree-bit {
+
+    fill: var(--purple);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    text-anchor: middle;
+
+}
+
+
+.tree-node.internal {
+
+    fill: #eeeefa;
+
+    stroke: var(--purple);
+
+    stroke-width: 2;
+
+}
+
+
+.tree-node.leaf {
+
+    fill: #e8f8f2;
+
+    stroke: var(--green);
+
+    stroke-width: 2;
+
+}
+
+
+.tree-label {
+
+    fill: var(--dark);
+
+    font-size: 12px;
+
+    text-anchor: middle;
+
+}
+
+
+/* =========================
+   ENCODED
+========================= */
+
+.encoded-section {
+
+    background: var(--dark);
+
+    color: white;
+
+    border: none;
+
+}
+
+
+.encoded-section
+.section-title small {
+
+    color: #a9a9ba;
+
+}
+
+
+.encoded-box {
+
+    background: #151525;
+
+    border: 1px solid #39394f;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    min-height: 70px;
+
+    word-break: break-all;
+
+    color: #d8d8ff;
+
+    font-family: monospace;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   TRANSMISSION
+========================= */
+
+.transfer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0;
+
+    color: var(--purple);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.transfer span {
+
+    height: 1px;
+
+    background: #d5d5e3;
+
+    flex: 1;
+
+}
+
+
+/* =========================
+   NEXT PAGE
+========================= */
+
+.next-page {
+
+    text-align: center;
+
+}
+
+
+.next-page h2 {
+
+    margin-top: 0;
+
+}
+
+
+.next-page p {
+
+    color: var(--muted);
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   RECEIVER
+========================= */
+
+.input-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.receive-input {
+
+    min-height: 170px;
+
+}
+
+
+.decode-table {
+
+    margin-top: 20px;
+
+    overflow-x: auto;
+
+}
+
+
+.final-message {
+
+    background: #e8f8f2;
+
+    border: 1px solid #c7eddf;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    font-size: 18px;
+
+    min-height: 65px;
+
+    word-break: break-word;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .topbar {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .status {
+
+        display: none;
+
+    }
+
+
+    nav {
+
+        width: 100%;
+
+    }
+
+
+    nav a {
+
+        flex: 1;
+
+        text-align: center;
+
+    }
+
+
+    .grid-2 {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    main {
+
+        width: 94%;
+
+        margin-top: 20px;
+
+    }
+
+
+    .section {
+
+        padding: 18px;
+
+    }
+
+}

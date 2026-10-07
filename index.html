@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huffman Messenger - Sender</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="logo">
+            HM
+        </div>
+
+        <div>
+            <h1>Huffman Messenger</h1>
+            <span>Sender</span>
+        </div>
+
+    </div>
+
+
+    <nav>
+        <a href="index.html" class="active">
+            Sender
+        </a>
+
+        <a href="receiver.html">
+            Receiver
+        </a>
+    </nav>
+
+
+    <div class="status">
+        <span></span>
+        Huffman Ready
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- SENDER -->
+
+    <section class="section sender">
+
+        <div class="section-title">
+
+            <div class="title-icon">
+                ✉
+            </div>
+
+            <div>
+                <h2>Sender</h2>
+                <small>Enter your message</small>
+            </div>
+
+        </div>
+
+
+        <textarea
+            id="message"
+            placeholder="Type your message here..."
+        ></textarea>
+
+
+        <button onclick="encodeMessage()">
+            Encode Message
+        </button>
+
+    </section>
+
+
+    <!-- FREQUENCY + CODES -->
+
+    <div class="grid-2">
+
+
+        <!-- FREQUENCY -->
+
+        <section class="section">
+
+            <div class="section-title compact">
+
+                <div class="title-icon purple">
+                    ƒ
+                </div>
+
+                <div>
+                    <h2>Character Frequency</h2>
+                    <small>Frequency table</small>
+                </div>
+
+            </div>
+
+
+            <div
+                id="frequency"
+                class="content-box"
+            >
+
+                <span class="placeholder">
+                    No data yet
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CODES -->
+
+        <section class="section">
+
+            <div class="section-title compact">
+
+                <div class="title-icon purple">
+                    01
+                </div>
+
+                <div>
+                    <h2>Binary Code</h2>
+                    <small>Huffman codes</small>
+                </div>
+
+            </div>
+
+
+            <div
+                id="codes"
+                class="content-box"
+            >
+
+                <span class="placeholder">
+                    No codes yet
+                </span>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- HUFFMAN TREE -->
+
+    <section class="section tree-section">
+
+        <div class="section-title">
+
+            <div class="title-icon purple">
+                ⌘
+            </div>
+
+            <div>
+                <h2>Huffman Tree</h2>
+                <small>
+                    Generated from character frequency
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="tree-scroll">
+
+            <svg
+                id="tree"
+                aria-label="Huffman Tree"
+            ></svg>
+
+        </div>
+
+    </section>
+
+
+    <!-- ENCODED MESSAGE -->
+
+    <section class="section encoded-section">
+
+        <div class="section-title">
+
+            <div class="title-icon dark">
+                01
+            </div>
+
+            <div>
+                <h2>Encoded Message</h2>
+                <small>Binary transmission data</small>
+            </div>
+
+        </div>
+
+
+        <div
+            id="encoded"
+            class="encoded-box"
+        >
+            Waiting for encoded message...
+        </div>
+
+
+        <div class="button-row">
+
+            <button
+                onclick="copyBinary()"
+            >
+                Copy Binary
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRANSMISSION -->
+
+    <div class="transfer">
+
+        <span></span>
+
+        <b>
+            TRANSMISSION
+        </b>
+
+        <span></span>
+
+    </div>
+
+
+    <!-- NEXT PAGE -->
+
+    <section class="section next-page">
+
+        <h2>Ready to receive?</h2>
+
+        <p>
+            Copy the binary message and open the Receiver page.
+        </p>
+
+
+        <a
+            href="receiver.html"
+            class="receiver-link"
+        >
+            Open Receiver →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+    Huffman Messenger
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
